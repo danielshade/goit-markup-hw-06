@@ -46,110 +46,10 @@ button {
 }
 
 .container {
-  min-width: 320px;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
-
-/*--------MOB-HEADER-----*/
-.mob-header {
-  display: flex;
-  align-items: center;
-  padding: 16px;
-  justify-content: space-between;
-}
-
-.mob-nav-open-btn {
-  background-color: transparent;
-  border: none;
-}
-
-.logo-icon {
-  fill: #2f2f37;
-  stroke: 2F2F37;
-}
-
-/*-------MOB-NAV--------*/
-
-.mob-nav-container {
-  padding: 24px 16px 40px;
-  position: relative;
-}
-
-.mob-nav-closed-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  background-color: #e7e9fc;
-  margin-left: auto;
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  padding: 0;
-}
-
-.mob-nav-list {
-  margin-top: 72px;
-}
-
-.mob-nav-item {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11111;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-}
-
-.mob-nav-item-studio {
-  color: #404bbf;
-}
-
-.mob-nav-list-item {
-  margin-bottom: 40px;
-}
-
-.mob-nav-list-item:last-child {
-  margin-bottom: 168px;
-}
-
-.mob-nav-addres-list {
-  margin-bottom: 48px;
-}
-
-.mob-address-list-item {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #434455;
-  font-style: normal;
-}
-.mob-address-list-item:hover,
-.mob-address-list-item:focus {
-  color: 4d5ae5;
-}
-
-.mob-nav-icon-list {
-  display: flex;
-  gap: 40px;
-}
-
-.mob-nav-icon-list-item {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #4d5ae5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mob-nav-icon {
-  fill: #f4f4fd;
-}
-/*-------MOB-NAV--------*/
 
 /*---------HEADER--------*/
 
@@ -161,7 +61,7 @@ button {
 }
 
 .header-container {
-  display: none;
+  display: flex;
   align-items: center;
 }
 
@@ -257,23 +157,22 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-img.jpg.jpg);
+    url(../images/hero-img.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   max-width: 1440px;
 }
 
 .main-hero {
   font-weight: 700;
-
-  font-size: 36px;
-  line-height: 1.11;
+  font-size: 56px;
+  line-height: 1.07;
   letter-spacing: 0.02em;
   color: #fff;
   text-align: center;
-  max-width: 216px;
-  margin-bottom: 72px;
+  max-width: 496px;
+  margin-bottom: 48px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -322,19 +221,21 @@ button {
 }
 
 .about-us {
-  padding-bottom: 96px;
-  padding-top: 96px;
+  padding-bottom: 120px;
+  padding-top: 120px;
 }
 
 .about-us-list {
-  padding: 16px;
   display: flex;
-  gap: 72px;
-  flex-direction: column;
+  gap: 24px;
+}
+
+.about-us-list-item {
+  width: calc((100% - 72px) / 4);
 }
 
 .about-us-icon-container {
-  display: none;
+  display: flex;
   background-color: #f4f4fd;
   border: 1px solid #8e8f99;
   border-radius: 4px;
@@ -345,18 +246,15 @@ button {
 }
 
 .about-us-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #2e2f42;
 }
 
 .about-us-txt {
-  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -368,8 +266,8 @@ button {
 /*--------------OUR TEAM----------*/
 .our-team {
   background-color: #f4f4fd;
-  padding-bottom: 96px;
-  padding-top: 96px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .our-team-title {
@@ -385,21 +283,14 @@ button {
 
 .our-team-list {
   display: flex;
-  flex-direction: column;
-  gap: 72px;
+  gap: 24px;
 }
 
 .our-team-item {
   border-radius: 0 0 4px 4px;
+  width: calc((100% - 3 * 24px) / 4);
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  margin-right: 28px;
-  margin-left: 28px;
-  width: calc(100% -32px);
-}
-
-.our-team-photo {
-  width: 100%;
 }
 
 .name-position-container {
@@ -476,18 +367,19 @@ button {
 /*--------------OUR PORTFOLIO----------*/
 
 .our-portfolio {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .our-portfolio-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 1.11111;
   letter-spacing: 0.02em;
   color: #2e2f42;
   text-transform: capitalize;
   text-align: center;
+  line-height: 1.11;
   margin-bottom: 72px;
 }
 
@@ -499,7 +391,7 @@ button {
 }
 
 .portfolio-list-item {
-  padding: 0 16px;
+  width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -524,7 +416,6 @@ button {
 }
 
 .our-portfolio-txt {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -565,23 +456,17 @@ button {
 /*-------------FOOOTER----------*/
 .footer {
   background-color: #2e2f42;
-  padding-bottom: 96px;
-  padding-top: 96px;
+  padding-bottom: 100px;
+  padding-top: 100px;
 }
 
 .footer-container {
   display: flex;
-  flex-direction: column;
-  padding-right: 16px;
-  padding-left: 16px;
+  align-items: baseline;
 }
 
 .footer-logo-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 72px;
+  margin-right: 120px;
 }
 
 .footer-logo {
@@ -593,7 +478,6 @@ button {
   text-transform: uppercase;
   color: #4d5ae5;
   display: inline-block;
-  margin: 0 auto;
   margin-bottom: 16px;
 }
 
@@ -606,17 +490,14 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 288px;
+  max-width: 264px;
 }
 
 .footer-icon-container {
-  margin: 0 auto;
-  margin-bottom: 72px;
+  margin-right: 80px;
 }
 
 .footer-accent-txt {
-  display: flex;
-  justify-content: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -659,8 +540,7 @@ button {
 
 .footer-form {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
 
 .footer-input-label {
@@ -671,7 +551,7 @@ button {
 .footer-input {
   border: 1px solid #ffffff;
   border-radius: 4px;
-  width: 288px;
+  width: 264px;
   height: 40px;
   background-color: transparent;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -687,7 +567,6 @@ button {
 }
 
 .footer-btn {
-  margin: 0 auto;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -697,7 +576,7 @@ button {
   color: #ffffff;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   background-color: #4d5ae5;
   border: none;
@@ -722,7 +601,6 @@ button {
 /*-------------MODAL----------*/
 
 .backdrop {
-  display: none;
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
@@ -740,19 +618,6 @@ button {
   visibility: visible;
   pointer-events: auto;
 }
-
-.backdrop {
-  /* any styles */
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  }
-
-  .backdrop.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  }
 
 .modal-container {
   border-radius: 4px;
@@ -780,8 +645,7 @@ button {
   background-color: #e7e9fc;
   margin-left: auto;
   margin-bottom: 24px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
   top: 24px;
   right: 24px;
@@ -831,6 +695,7 @@ button {
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
+
 }
 
 .modal-form-input {
@@ -893,7 +758,7 @@ textarea:placeholder-shown {
   margin-bottom: 24px;
 }
 
-.modal-check:checked + label > span {
+.modal-check:checked +label > span {
   border: none;
   background-color: #404bbf;
   fill: #f4f4fd;
@@ -906,9 +771,7 @@ textarea:placeholder-shown {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 8px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   fill: transparent;
@@ -951,272 +814,4 @@ textarea:placeholder-shown {
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: #404bbf;
-}
-
-/*----------------Tablet-------------------*/
-
-@media (min-width: 768px) {
-  /*-----header-Tablet-----*/
-  .container {
-    max-width: 768px;
-    padding: 0 16px;
-    margin: 0 auto;
-  }
-  .mob-header {
-    display: none;
-  }
-
-  .mob-modal {
-    display: none;
-  }
-
-  .header-container {
-    display: flex;
-  }
-
-  .mob-nav-container {
-    display: none;
-  }
-
-  .nav-logo {
-    margin-right: 120px;
-  }
-
-  .address-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .address-list-item {
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-  }
-
-  /*-----hero-Tablet---------*/
-
-  .hero {
-    padding-bottom: 112px;
-    padding-top: 112px;
-  }
-
-  .main-hero {
-    max-width: 496px;
-    font-size: 56px;
-    line-height: 1.07;
-    margin-bottom: 36px;
-  }
-
-  /*-----------about-us-Tablet-------*/
-
-  .about-us-list {
-    padding: 0;
-    display: flex;
-    gap: 24px;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .about-us-list-item {
-    width: calc((100% - 24px) / 2);
-  }
-
-  .about-us-title {
-    text-align: left;
-  }
-
-  /*--------------team-Tablet--------*/
-
-  .our-team {
-    padding-left: 108px;
-    padding-right: 108px;
-    padding-bottom: 56px;
-  }
-
-  .our-team-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-
-  .our-team-list:first-child {
-    margin-bottom: 40px;
-  }
-
-  .our-team-item {
-    width: calc((100% - 24px) / 2);
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 40px;
-  }
-
-  /*--------------Portfolio-Tablet-----------*/
-
-  .portfolio-list-item {
-    width: calc((100% - 24px) / 2);
-    padding: 0;
-  }
-
-  /*------------Footer-Tablet----------*/
-
-  .footer {
-    padding-bottom: 96px;
-    padding-top: 96px;
-    padding-left: 108px;
-  }
-
-  .footer-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0;
-  }
-
-  .footer-logo-container {
-    max-width: 264px;
-    margin-right: 24px;
-    display: block;
-  }
-
-  .footer-icon-container {
-    margin: 0;
-  }
-
-  .footer-accent-txt {
-    justify-content: left;
-  }
-
-  .footer-form {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-  }
-  .footer-form-container {
-    display: inline-block;
-    text-align: left;
-  }
-  .footer-form-title {
-    text-align: left;
-    margin-left: auto;
-  }
-
-  .footer-input {
-    max-width: 264px;
-  }
-}
-
-/*----------------Laptop-------------------*/
-
-@media (min-width: 1158px) {
-  .container {
-    max-width: 1158px;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
-
-  /*---------HEADER-Laptop-------*/
-
-  .address-list {
-    flex-direction: row;
-    gap: 40px;
-    letter-spacing: 0.02em;
-  }
-
-  /*----------Hero-Laptop-----*/
-  .hero {
-    padding-bottom: 188px;
-    padding-top: 188px;
-  }
-  .main-hero {
-    font-weight: 700;
-    margin-bottom: 48px;
-  }
-  /*---------about-us-Laptop-----*/
-  .about-us {
-    padding-bottom: 120px;
-    padding-top: 120px;
-  }
-
-  .about-us-list-item {
-    width: calc((100% - 72px) / 4);
-  }
-
-  .about-us-list {
-    gap: 24px;
-  }
-
-  .about-us-icon-container {
-    display: flex;
-  }
-
-  .about-us-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    color: #2e2f42;
-    margin-bottom: 8px;
-    text-align: left;
-  }
-
-  .about-us-txt {
-    font-weight: 400;
-  }
-
-  /*--------our-team-Laptop------*/
-
-  .our-team {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  .our-team-list {
-    flex-direction: row;
-    gap: 24px;
-    flex-wrap: nowrap;
-  }
-
-  .our-team-item {
-    width: calc((100% - 3 * 24px) / 4);
-    margin-bottom: 0;
-  }
-
-  /*---------portfolio-Laptop-------*/
-  .our-portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  .portfolio-list-item {
-    width: calc((100% - 48px) / 3);
-  }
-
-  /*-------footer-Laptop-----*/
-
-  .footer {
-    padding-bottom: 100px;
-    padding-top: 100px;
-  }
-
-  .footer-logo-container {
-    margin-right: 120px;
-    margin-bottom: 0;
-    margin-left: -54px;
-  }
-
-  .footer-txt {
-    max-width: 264px;
-  }
-
-  .footer-icon-container {
-    margin-right: 80px;
-  }
-
-  .footer-btn {
-    min-width: 165px;
-  }
-
-  .backdrop {
-    display: initial;
-  }
 }
